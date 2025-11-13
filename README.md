@@ -18,11 +18,6 @@ Multiple classical and deep learning models were evaluated, including Logistic R
 5. Applied text cleaning: lowercase, remove punctuation, digits, and extra whitespace.  
 6. Created `clean_text` feature for modeling.
 
-<div align="center">
-  <img src="images/eai6010_data_cleaning.png" alt="Data Cleaning Pipeline" width="600"/>
-  <p><em>Text preprocessing and cleaning workflow.</em></p>
-</div>
-
 ---
 
 ### 🧩 Model Development
@@ -35,11 +30,6 @@ Four models were trained and evaluated on the prepared dataset.
 | LSTM | 0.907 | 0.92 | 0.90 | 0.91 | Captures sequential patterns |
 | **DistilBERT** | **0.949** | **0.96** | **0.94** | **0.95** | Best-performing model |
 
-<div align="center">
-  <img src="images/eai6010_model_comparison.png" alt="Model Comparison" width="600"/>
-  <p><em>DistilBERT achieved the highest performance (94.9% accuracy).</em></p>
-</div>
-
 ---
 
 ### ☁️ Model Deployment (Google Cloud Run)
@@ -51,21 +41,12 @@ The final DistilBERT model was deployed as a **serverless microservice**.
 - Built Docker container for Flask API  
 - Pushed and deployed container to Cloud Run  
 
-**Deployment Command**
-```bash
-gcloud run deploy classify-article \
-  --project=eai6010-group-work \
-  --source="GCP_Deployment" \
-  --region=us-central1 \
-  --allow-unauthenticated \
-  --memory=2048Mi
-```
 
 ---
 
 ### 🧪 API Testing
-<div align="center"> <img src="images/eai6010_api_testing_1.png" alt="API Testing Screenshot 1" width="600"/> <p><em>Testing the API with user-written review input.</em></p> </div>
-<div align="center"> <img src="images/eai6010_api_testing_2.png" alt="API Testing Screenshot 2" width="600"/> <p><em>API successfully returns predicted sentiment.</em></p> </div>
+<div align="center"> <img src="images/API_testing-postman.png" alt="API Testing Screenshot 1" width="600"/> <p><em>Testing the API with user-written review input.</em></p> </div>
+<div align="center"> <img src="images/API_testing-google colab.png" alt="API Testing Screenshot 2" width="600"/> <p><em>API successfully returns predicted sentiment.</em></p> </div>
 
 ---
 
